@@ -1,26 +1,17 @@
 #define PI 3.14
+#define R 7
 int main () {
-
-int r = 7;
-int s = 0;
-int l = 0;
-int v = 0;
-int command = 0;
-int square = r * r;
-int cube = square * r;
-l = 2 * PI * r;
-v = ( 4 / 3 ) * PI * cube;
-s = PI * square;
-
-	if (command != s && command != v) {
-	command == l;
+float result;
+char command;
+int square = R * R;
+int cube = square * R;
+command = 'L';
+	if (command = 'L') {
+	result = 2 * PI * R;
+	}else if (command = 'V') {
+	result = ( 4 / 3 ) * PI * cube;
+	}else if (command = 'S') {
+	result = PI * square;
 	}
-	if (command != l && command != s) {
-	command == v;
-	}
-	if (command != v && command != l) {
-	command == s;
-	}
-	command = v;
 	return 0;
 }
