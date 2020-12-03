@@ -1,16 +1,19 @@
-void main (){
-	int N = 5;
-	int A = 10000;
-	int PERC = 100;
-	float summary_out;
-	double count;
-	float at_perc_per_annum = 7 / ( float )PERC;
-	for ( int i = 0; i != N; i++ ){
+void main (){	//* создаем void функцию
+	int N = 5;	//* создаем переменную количества лет
+	int A = 10000;	//* создаем переменную вложения
+	int PERC = 100;	//* создаем переменную процента
+	float summary_out;	//* создаем переменную 
+	double count;	//* создаем перменную счёта
+	float at_perc_per_annum = 7 / ( float )PERC;	// создаем переменную процентной ставки
+	
+	//* ЦИКЛ FOR
+	
+	for ( int i = 0; i != N; i++ ){	//* создаем цикл для счета 
 		count = count +  A * (double)at_perc_per_annum; 
 	}
 	summary_out = (double)A + count;
 	
-	
+	//* WHILE
 	
 	float summary_out_w;
 	int i_w = 0;
@@ -22,7 +25,7 @@ void main (){
 	}
 	summary_out_w = (double)A + count_w;
 	
-	
+	//* DO_WHILE
 	
 	float summary_out_d;
 	int i_d = 0;
