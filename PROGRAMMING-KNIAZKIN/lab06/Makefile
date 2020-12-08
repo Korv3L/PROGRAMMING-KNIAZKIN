@@ -9,11 +9,11 @@ clean:
 prep:
 	mkdir dist
 compile: 
-	$(CC) $(C_OPTS) lab01/src/main.c -o dist/main01.bin
-	$(CC) $(C_OPTS) lab02/src/main.c -o dist/main02.bin
-	$(CC) $(C_OPTS) lab03/src/main.c -o dist/main03.bin
-	$(CC) $(C_OPTS) lab04/src/main.c -o dist/main04.bin
-	$(CC) $(C_OPTS) lab05/src/main.c -o dist/main05.bin
+	$(CC) $(C_OPTS) task01/src/main.c -o dist/main01.bin
+	$(CC) $(C_OPTS) task02/src/main.c -o dist/main02.bin
+	$(CC) $(C_OPTS) task03/src/main.c -o dist/main03.bin
+	$(CC) $(C_OPTS) task04/src/main.c -o dist/main04.bin
+	$(CC) $(C_OPTS) task05/src/main.c -o dist/main05.bin
 
 run: clean prep compile
 	./dist/main.bin
