@@ -1,22 +1,16 @@
-int main() {
-int values[4][4] = { -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7};
-int number = values[2][3];
-int prev = number - 1;
-int next = number + 1;
-int num_max = values[3][3];
-int num_min = values[0][0];
-int a = num_min - prev;
-	if(a < 0){
-	a = -1 * a;
+int main(){
+int m[8]={2,546,75,12,1000,9999,51,807};
+int luck = 0;	//* кількість "щасливих" квитків
+int non_luck = 0;	//* кількість звичайних квитків
+for( int i = 0; i <= 7; i++){
+	int n = 0;
+	n = m[i] / 1000;	//* перевірка квитків на "щасливі" та звичайні
+	if ( n != 0){
+	luck = luck + 1;
 	}else{
-	a = a * 1;
+	non_luck = non_luck + 1;
 	}
-	int b = num_max - next;
-	if(b < 0){
-	b = -1 * b;
-	}else{
-	b = b * 1;
-	}
-	return 0;
+}
+return 0;
 }
 

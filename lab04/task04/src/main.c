@@ -1,13 +1,12 @@
 int main () {
 	float x, y;
-	float parabola, line , funct;
-	y = parabola;
+	char choice;
 	x = 4;
-	if( y = parabola)
+	if(choice = "parabola")
 	y = x * x;
-	else if ( y = line )
+	else if (choice = "line")
 	y = 1;
-	else if ( y = funct )
+	else if (choice = "func")
 	y = -1 / x;
 	return 0;
 }
