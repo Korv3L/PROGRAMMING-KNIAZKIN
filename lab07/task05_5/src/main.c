@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-int get_fact_for(int N);
-int get_fact_while(int N);
-int get_fact_do(int N);
+int get_fact_for(int a);
+int get_fact_while(int a);
+int get_fact_do(int a);
 
 int main(){
+	srand(time(0));
 	int N = 1 + rand() % 20;
 	
 	int result_for = get_fact_for(N);
@@ -14,43 +15,29 @@ int main(){
 	return 0;
 	}
 	
-int get_fact_for(int N){
-int fact_f;	//* создаем переменную двойного факториала для цикла for
-fact_f = N;	//* Сравниваем двойной факториал с глобальным числом
-for (int numb = N; numb >= 2;){	//* создаем цикл for
-	numb = numb-2;	//* формула для расчета цифр из числа для двойного факториала
-	if ( numb <= 0){	//* условие если цифра будет меньше или равна нулю
-	break;	//* прерываем функцию
-	}	//* конец условия
-	fact_f = fact_f * numb;	//* формула двойного факториала
-	return fact_f;	
-	}
+int get_fact_for(int a){
+int fact_F = 1;	//* создаем переменную двойного факториала для цикла for
+for ( int i = a; i >= 1;){	//* создаем цикл for
+	fact_F *= i;	//* формула для обчислення подвійного факторіала
+	i = i - 2;
+	}	//* конец цикла for
+	return fact_F;
 }
-int get_fact_while(int N){
-int numb_W;	//* создаем переменную цифр числа для цикла while
-int fact_W;	//* создаем переменную двойного факториала для цикла while
-fact_W = N;	//* Сравниваем двойной факториал с глобальным числом
-numb_W = N;	//* Сравниваем цифры числа с глобальным числом
-while(numb_W >= 2){	//* создаем цикл while
-	numb_W = numb_W-2;	//*формула для расчета цифр из числа для двойного факториала
-	if ( numb_W <= 0){	//* условие если цифра будет меньше или равна нулю
-	break;	//* прерываем функцию
-	}	//* конец условия
-	fact_W = fact_W * numb_W;	//* формула двойного факториала
-	return fact_W;
+int get_fact_while(int a){
+int fact_W = 1;	//* создаем переменную двойного факториала для цикла while
+int i = a;
+while(i >= 1){	//* создаем цикл while
+	fact_W *= i; 	//* формула для обчислення подвійного факторіала
+	i = i - 2;
 }	//* конец цикла while
+return fact_W;
 }
-int get_fact_do(int N){
-int numb_D;	//* do_while
-int fact_D;	//* do_while
-fact_D = N;	//* Сравниваем двойной факториал с глобальным числом
-numb_D = N;	//* Сравниваем цифры числа с глобальным числом
+int get_fact_do(int a){
+int fact_D = 1;
+int i = a;
 do{	//* do_while
-	numb_D = numb_D-2;	//* формула для расчета цифр из числа для двойного факториала
-	if ( numb_D <= 0){	//* условие если цифра будет меньше или равна нулю
-	break;	//* прерываем функцию
-	}	//* конец условия
-	fact_D = fact_D * numb_D;	//* формула двойного факториала
-	}while(numb_D >= 2);	//* конец цикла do_while
+	fact_D *= i;	//* формула для обчислення подвійного факторіала 
+	i = i - 2;
+	}while(i >= 1);
 	return fact_D;
 }

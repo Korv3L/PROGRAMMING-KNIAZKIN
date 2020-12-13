@@ -9,17 +9,18 @@ return 0;
 }
 
 char reword(char *a){
-char temp;
-temp = a[0];
-a[0] = a[3];
-a[3] = temp;
-char temp1;
-temp1 = a[1];
-a[1] = a[4];
-a[4] = temp1;
-char temp2;
-temp2 = a[2];
-a[2] = a[5];
-a[5] = temp2;
+int len = 0;	//* довжина слова
+for(int i = 0; a[i] != '\0';i++){
+	if(a[i] != '\0'){
+	len++;
+	}
+}
+int n = len / 2;	//* різниця між літерами даного слова для їх перестановок, яка дорівнює половині len
+for(int i = 0; i != n; i++){
+	int temp = a[i];
+	a[i] = a[i + n];
+	a[i + n] = temp;
+	
+	}
 return *a;
 }
