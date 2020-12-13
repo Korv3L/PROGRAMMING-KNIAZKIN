@@ -5,13 +5,12 @@ int get_rev_while(int n);
 int get_rev_do(int n);
 
 int main(){
+	srand(time(0));
 	int n = 100000 + rand() % 999999;
 	
 	int result_for = get_rev_for(n);
 	int result_while = get_rev_while(n);
 	int result_do = get_rev_do(n);
-	
-	return 0;
 	}
 	
 int get_rev_for(int n){
